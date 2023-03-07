@@ -1,0 +1,5 @@
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(CPPUTEST cpputest)
+include_directories(${CPPUTEST_INCLUDE_DIRS})
+add_executable(tests main.cpp)
+target_link_libraries(tests ${CPPUTEST_LINK_LIBRARIES})
